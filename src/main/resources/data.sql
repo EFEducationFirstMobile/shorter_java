@@ -1,0 +1,1 @@
+INSERT INTO USER(ID, USERNAME, PASSWORD) VALUES(1, 'jimmy', '$2a$10$y0XoPw40/j91YSHXzRD9MeE9b0v1d2M6MzEAKPqGJ9yAwYSA0jGgS' /* password = 'secret' */);
