@@ -47,7 +47,9 @@ To stop it press *Cmd+C* | *Ctrl+C*
 ```json
 $ curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/json" \
      --data '{"url": "http://example.com"}' -X POST http://localhost:5000/
+```
 
+```
 {
   "url": "http://example.com",
   "shorturl": "http://localhost:5000/1"
@@ -58,15 +60,22 @@ $ curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/
 $ curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/json" \
      --data '{"url": "http://example.com", "shorturl": "foobar"}' \
      http://localhost:5000/
-     
+```
+
+```     
 {
   "url": "http://example.com",
   "shorturl": "http://localhost:5000/foobar"
 }
+```
 
+```
 $ curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/json" \
      --data '{"url": "http://example.com", "shorturl": "foobar"}' \
      http://localhost:5000/
+```
+
+```
 {
   "error": "Could not create new link. One with the given `shorturl` already exists"
 }
@@ -96,9 +105,11 @@ $ curl -v -H "Content-Type: application/json" \
 
 * how many times the short URL has been accessed
 ```json
-curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/json" \
+$ curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/json" \
      http://localhost:5000/foobar
-    
+```
+
+```
 {
   "accessed": 1,
   "created": "2017-07-11T21:38:46.595948",
@@ -109,9 +120,11 @@ curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/js
 
 4. See a list of the URLs he/she created and the information detailed in item 3
 ```json
-curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/json" \
+$ curl -H "Authorization: Basic amltbXk6c2VjcmV0" -H "Content-Type: application/json" \
      http://localhost:5000/
-     
+```
+
+```
 [
   {
     "accessed": 0,
